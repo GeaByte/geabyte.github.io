@@ -9,16 +9,18 @@
       </router-view>
     </main>
     <FooterSection />
+    <SiteChat />
   </div>
 </template>
 
 <script>
 import NavBar from './components/NavBar.vue';
 import FooterSection from './components/FooterSection.vue';
+import SiteChat from './components/SiteChat.vue';
 
 export default {
   name: 'App',
-  components: { NavBar, FooterSection },
+  components: { NavBar, FooterSection, SiteChat },
 };
 </script>
 
