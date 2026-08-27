@@ -109,7 +109,7 @@
 </template>
 
 <script>
-import { computed, nextTick, onBeforeUnmount, ref } from 'vue';
+import { computed, nextTick, onBeforeUnmount, onMounted, ref } from 'vue';
 import { askSite } from '@/utilities/askSite';
 
 export default {
@@ -151,10 +151,18 @@ export default {
     };
 
     const close = () => {
+      if (!isOpen.value) return;
       isOpen.value = false;
       nextTick(() => {
         if (fabEl.value) fabEl.value.focus();
       });
+    };
+
+    const onDocumentKeydown = (event) => {
+      if (event.key === 'Escape' && isOpen.value) {
+        event.preventDefault();
+        close();
+      }
     };
 
     const toggle = () => {
@@ -217,8 +225,13 @@ export default {
       }
     };
 
+    onMounted(() => {
+      window.addEventListener('keydown', onDocumentKeydown);
+    });
+
     onBeforeUnmount(() => {
       sending.value = false;
+      window.removeEventListener('keydown', onDocumentKeydown);
     });
 
     return {
