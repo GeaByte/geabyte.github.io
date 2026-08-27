@@ -158,8 +158,12 @@ export default {
       });
     };
 
+    const isEscapeKey = (event) => (
+      event.key === 'Escape' || event.key === 'Esc' || event.code === 'Escape' || event.keyCode === 27
+    );
+
     const onDocumentKeydown = (event) => {
-      if (event.key === 'Escape' && isOpen.value) {
+      if (isEscapeKey(event) && isOpen.value) {
         event.preventDefault();
         close();
       }
@@ -171,7 +175,7 @@ export default {
     };
 
     const onPanelKeydown = (event) => {
-      if (event.key === 'Escape') {
+      if (isEscapeKey(event)) {
         event.preventDefault();
         close();
         return;
@@ -226,12 +230,14 @@ export default {
     };
 
     onMounted(() => {
-      window.addEventListener('keydown', onDocumentKeydown);
+      window.addEventListener('keydown', onDocumentKeydown, true);
+      window.addEventListener('keyup', onDocumentKeydown, true);
     });
 
     onBeforeUnmount(() => {
       sending.value = false;
-      window.removeEventListener('keydown', onDocumentKeydown);
+      window.removeEventListener('keydown', onDocumentKeydown, true);
+      window.removeEventListener('keyup', onDocumentKeydown, true);
     });
 
     return {
