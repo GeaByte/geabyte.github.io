@@ -1,0 +1,50 @@
+[
+  {
+    "source_path": "src/components/HomePage.vue",
+    "title": "Home",
+    "url": "/",
+    "content": "Available · Vancouver, BC Full-Stack Engineer & Problem Solver I build end-to-end web systems — from Symfony backends and React frontends to Stripe integrations, custom portals, and SEO-optimised platforms. Open to all software roles . About me → View projects 75% Admin time saved via custom invoicing 2× Organic impressions after SEO overhaul 1.4k URLs crawled by Python link auditor 3.98 GPA · Dean's List · Honour Roll Core: Symfony · PHP · React · Vue · Python Infra: OVHCloud · MySQL · Firebase · Stripe Capabilities Technical Skills Featured work Projects View all → HomePage, Languages, PHP, JavaScript ES6+, Python, Java, Kotlin, SQL, Frontend, React, Vue.js, HTML5, CSS3 / SASS, Bootstrap, Backend, Symfony, Laravel, Node.js, Express, Spring Boot, Firebase, Databases, MySQL, MongoDB, MSSQL, SQLite, Firestore, Data & ML, Scikit-Learn, Pandas, Matplotlib, Tableau, Power BI, Tools & Infra, Git, OVHCloud, Stripe API, RESTful APIs, Android Studio"
+  },
+  {
+    "source_path": "src/components/AboutMe.vue",
+    "title": "About",
+    "url": "/about",
+    "content": "Background About Raymond Full-Stack Engineer based in Vancouver, BC. I combine a rigorous Computer Science education with real-world production experience to build systems that actually ship. Experience Education I'm Raymond , a passionate engineer who enjoys creating engaging and functional software solutions. Graduated from Douglas College (Post-Baccalaureate Diploma in Computer and Information Systems) with a 3.98 GPA and consecutive Dean's List honours. I take pride in learning fast in high-pressure environments. I regularly dive into personal side projects to deepen expertise — from building a Python link auditor to architecting multi-tenant SaaS platforms. I enjoy reading others' code as much as writing my own. Detail-oriented and methodical. I tend to write fewer bugs by thinking through edge cases before touching the keyboard. When things break, I trace root causes systematically rather than applying patches. Clean, readable code is non-negotiable. Open to all software roles — full-stack, backend, frontend, data engineering, or DevOps. I'm excited about working on systems that scale, collaborating with strong teams, and continuing to grow as an engineer. WAEE French Learning · Vancouver, BC Sole developer owning the full SDLC across multiple web applications. Custom invoicing system → 75% reduction in admin processing time. SEO overhaul with Rich Results → +100% organic impressions . Stripe API integration: subscriptions, inventory, VOD — all metadata-driven. Career Management Portal with secure Admin dashboard for non-technical staff. Peer Tutor — Computer & Information Systems Douglas College · New Westminster, BC Python web crawler — scanned 1,488 links, flagged 54 broken in <5 min. 100+ tutoring sessions across programming, data structures, and algorithms. Post Degree Diploma — Computer & Information Systems Bachelor of Science — Economics Penn State University · PA, USA AboutMe, Introduction, Learning & Growth, Programming Approach, What I\\, Full-Stack Engineer, WAEE French Learning · Vancouver, BC, Peer Tutor — Computer & Information Systems, Douglas College · New Westminster, BC, Post Degree Diploma — Computer & Information Systems, Douglas College · New Westminster, BC, Bachelor of Science — Economics, Penn State University · PA, USA"
+  },
+  {
+    "source_path": "src/components/ProjectsInfo.vue",
+    "title": "Projects",
+    "url": "/projects",
+    "content": "Portfolio All Projects A mix of side projects and course work — each tackling real problems with modern tooling. No projects in this category yet. ProjectsInfo"
+  },
+  {
+    "source_path": "src/components/FooterSection.vue",
+    "title": "Footer",
+    "url": "/",
+    "content": "Ray . Full-Stack Engineer · Vancouver, BC GitHub LinkedIn © Raymond. All rights reserved. FooterSection"
+  },
+  {
+    "source_path": "src/utilities/store.js",
+    "title": "Course Planning Web Application",
+    "url": "/projects/0",
+    "content": "Project: Course Planning Web Application Category: Side Project Technologies: JavaScript (React), CSS (Bootstrap), Python, MongoDB GitHub: https://github.com/doryang1019/course-tracking-system-frontend During my course planning, I often found myself gathering information from various sources — tracking mandatory courses, understanding prerequisites, and checking availability. This multi-step process was time-consuming and error-prone. To solve this, I built a web application that consolidates all relevant course data in one place, complete with a visual course map. Students can see prerequisite chains at a glance and track their status — yet to take, enrolled, or completed. The application is being developed using JavaScript (React) for the frontend, Python for the backend API, and MongoDB for persistent storage. The goal is to eliminate the friction from academic planning entirely."
+  },
+  {
+    "source_path": "src/utilities/store.js",
+    "title": "Household Resale Android App",
+    "url": "/projects/1",
+    "content": "Project: Household Resale Android App Category: Course Project Technologies: Java, SQLite, Android Studio GitHub: https://github.com/GeaByte/household-resale-android-app A course assignment to develop a full household-items resale app for Android using Java . I led design and implementation of the app's pages and core features while teammates handled SQLite integration and CRUD operations. Key features I built include: Location and notification permission management \"Nearby Me\" — live listings filtered by user's GPS coordinates Sorting and filtering by price, category, and distance Full seller profile and item listing management The project reinforced my understanding of Android lifecycles, permissions, and local data persistence."
+  },
+  {
+    "source_path": "src/utilities/store.js",
+    "title": "Online Order Website",
+    "url": "/projects/2",
+    "content": "Project: Online Order Website Category: Course Project Technologies: PHP (Laravel), MySQL, Bootstrap GitHub: https://github.com/GeaByte/Sandwich_Queen_Online_Order_System A full-featured online ordering system built with PHP and the Laravel framework as a course project. The site allows customers to browse a menu, place orders, and manage their accounts. Key features include authentication, a product catalogue with filtering, a shopping cart, and an order history system. Built with MySQL for data persistence and Bootstrap for a clean, responsive UI. This project deepened my understanding of MVC architecture, Eloquent ORM, and Laravel's routing system."
+  },
+  {
+    "source_path": "src/utilities/store.js",
+    "title": "MERN Family Todo App",
+    "url": "/projects/3",
+    "content": "Project: MERN Family Todo App Category: Course Project Technologies: React, Express, MongoDB, Node.js, Axios A full-stack MERN application built for a course project. Features RESTful APIs for authentication, task management, and family user grouping — allowing multiple household members to share and manage tasks. Used MongoDB with Mongoose for schema flexibility. Optimised Axios calls to reduce data-fetch overhead. JWT-based auth secures all routes. This project reinforced my understanding of SPA architecture, API design, and state management in React."
+  }
+]
