@@ -35,6 +35,8 @@ jobs:
       - name: Build
         run: npm run build
 
+      # GitHub Pages has no SPA rewrite. Missing paths serve 404.html,
+      # so the built index.html is copied there during npm run build.
       - name: Disable Jekyll
         run: touch dist/.nojekyll
 
