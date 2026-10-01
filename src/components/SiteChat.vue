@@ -94,12 +94,13 @@
         :class="{ open: isOpen }"
         :aria-expanded="isOpen ? 'true' : 'false'"
         aria-controls="site-chat-panel"
-        :aria-label="isOpen ? 'Close chat' : 'Ask about Raymond\'s work'"
+        :aria-label="isOpen ? 'Close chat' : 'Ask Ray'"
         @click="toggle"
       >
         <svg v-if="!isOpen" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
           <path d="M5 6.5A2.5 2.5 0 0 1 7.5 4h9A2.5 2.5 0 0 1 19 6.5v7A2.5 2.5 0 0 1 16.5 16H9l-4 3.5V6.5z" />
         </svg>
+        <span v-if="!isOpen" class="chat-fab-label">Ask Ray</span>
         <svg v-else viewBox="0 0 24 24" aria-hidden="true" focusable="false">
           <path d="M6 6l12 12M18 6L6 18" />
         </svg>
@@ -263,7 +264,7 @@ export default {
   position: fixed;
   right: 1.5rem;
   bottom: 1.5rem;
-  z-index: 400;
+  z-index: 10050;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -535,23 +536,34 @@ export default {
 }
 
 .chat-fab {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
+  min-height: 56px;
+  padding: 0 1.2rem 0 1rem;
+  border-radius: 999px;
   border: none;
   background: var(--accent);
   color: #0b0e11;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.55rem;
   cursor: pointer;
   box-shadow: 0 12px 28px rgba(200, 240, 77, 0.22);
   transition: background 0.2s, transform 0.2s;
 }
 
+.chat-fab-label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
 .chat-fab svg {
   width: 22px;
   height: 22px;
+  flex-shrink: 0;
 }
 
 .chat-fab:hover,
@@ -561,6 +573,11 @@ export default {
 }
 
 .chat-fab.open {
+  width: 56px;
+  height: 56px;
+  min-height: 56px;
+  padding: 0;
+  border-radius: 50%;
   background: var(--surface);
   color: var(--text);
   border: 1px solid var(--border);

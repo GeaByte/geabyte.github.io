@@ -17,7 +17,13 @@
 
 /* ── RESET & BASE ────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  /* clip does not create a scroll container, so position:fixed stays
+     viewport-pinned. overflow-x: hidden on body is a Chrome gotcha that
+     makes fixed elements stick to the document instead of the viewport. */
+  overflow-x: clip;
+}
 
 body {
   background: var(--bg);
@@ -25,7 +31,19 @@ body {
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.7;
-  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+/* Clip leftover horizontal overflow on the app shell (SiteChat teleports
+   to body, so it is a sibling of #app and stays viewport-fixed). */
+#app {
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+@supports not (overflow-x: clip) {
+  html, body { overflow-x: visible; }
+  #app { overflow-x: hidden; }
 }
 
 /* Noise overlay */
